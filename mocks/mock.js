@@ -1,6 +1,6 @@
 (function() {
     var changeTexts = function() {
-        this.wrapper    = document.getElementById("wrapper");
+        this.wrapper    = global.window.document.getElementById("wrapper");
         this.para       = this.wrapper.getElementsByTagName("p");
         // this.span       = this.wrapper.getElementsByTagName("span");
         
@@ -8,7 +8,7 @@
         this.para[1].innerHTML = "new paragraph 2";
     }
     
-    console.log('global in mock.js ', global);
+    // console.log('global in mock.js ', global);
     
     global.window.Some = {
         namespace : {
@@ -17,6 +17,8 @@
             }
         }
     };
+    
+    // exports.Some = global.window.Some;
     
     // $.extend(true, window, {
         // Some : {
