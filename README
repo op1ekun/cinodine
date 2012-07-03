@@ -1,0 +1,8 @@
+Continuoues integration for Javascript
+======================================
+
+1) Basics
+	a) QUnit tests written once for both frontend (browser) and backend (node.js)
+	b) DOM (with jQuery) support for node.js (jsdom)
+	c) JSLint support for both frontend and backend
+	d) support for JUnit output (XML) for integration with Bamboo
