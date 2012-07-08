@@ -1,3 +1,5 @@
+console.log('QUnit', QUnit);
+
 module = QUnit.module;
 
 //fake tests for mockups
@@ -13,23 +15,21 @@ module("mockup1", {
     }
 });
 
-test("some fake test case", function() {
+QUnit.test("some fake test case", function() {
 	expect(1);
 	
 	ok(false, "this is not true!");
 });
 
-test("soem DOM test", function() {
-    expect(2);
-    this.mockup     = global.window.Some.namespace.mockup;
-    this.mockup.changeTexts();
-    
-    this.wrapper    = global.window.document.getElementById("wrapper");
-        this.para       = this.wrapper.getElementsByTagName("p");
-        this.span       = this.wrapper.getElementsByTagName("span");
-    
-    equal(this.para[0].innerHTML, "new paragraph 1", "new text for paragraph 1");
-    equal(this.para[1].innerHTML, "new paragraph 2", "new text for paragraph 2");
-});
-
-
+// test("soem DOM test", function() {
+    // expect(2);
+    // this.mockup     = global.window.Some.namespace.mockup;
+    // this.mockup.changeTexts();
+//     
+    // this.wrapper    = global.window.document.getElementById("wrapper");
+        // this.para       = this.wrapper.getElementsByTagName("p");
+        // this.span       = this.wrapper.getElementsByTagName("span");
+//     
+    // equal(this.para[0].innerHTML, "new paragraph 1", "new text for paragraph 1");
+    // equal(this.para[1].innerHTML, "new paragraph 2", "new text for paragraph 2");
+// });
