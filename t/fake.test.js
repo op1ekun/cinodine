@@ -1,35 +1,31 @@
-console.log('QUnit', QUnit);
+(function($) {
+    
+    module = QUnit.module;
 
-module = QUnit.module;
-
-//fake tests for mockups
-module("mockup1", {
-    setup : function() {
-        // this.mockup     = Some.namespace.mockup;
+    //fake tests for mockups
+    module("mockup1", {
+        setup : function() {
+            // window is global in browser,
+            // node has its own global object
+            // that is why window is necessary
+            this.mockup     = window.Some.namespace.mockup;
+            this.para       = $("#wrapper").find("p");
+        }
+    });
+    
+    test("some fake test case", function() {
+    	expect(1);
+    	
+    	ok(false, "this is not true!");
+    });
+    
+    test("soem DOM test", function() {
+        expect(2);
+        this.mockup.changeTexts();
         
-        // this should be replace by some nitty witty templates
-        // eg. dustjs this way one can use the same template in browser and in nodejs
-        // this.wrapper    = document.getElementById("wrapper");
-        // this.para       = this.wrapper.getElementsByTagName("p");
-        // this.span       = this.wrapper.getElementsByTagName("span");
-    }
-});
+        this.para.each(function(index, elem) {
+            equal(elem.innerHTML, "new paragraph " + (index + 1), "new text for paragraph " + (index + 1));
+        });
+    });
 
-QUnit.test("some fake test case", function() {
-	expect(1);
-	
-	ok(false, "this is not true!");
-});
-
-// test("soem DOM test", function() {
-    // expect(2);
-    // this.mockup     = global.window.Some.namespace.mockup;
-    // this.mockup.changeTexts();
-//     
-    // this.wrapper    = global.window.document.getElementById("wrapper");
-        // this.para       = this.wrapper.getElementsByTagName("p");
-        // this.span       = this.wrapper.getElementsByTagName("span");
-//     
-    // equal(this.para[0].innerHTML, "new paragraph 1", "new text for paragraph 1");
-    // equal(this.para[1].innerHTML, "new paragraph 2", "new text for paragraph 2");
-// });
+}(jQuery));
