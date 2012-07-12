@@ -1,5 +1,5 @@
 (function($) {
-    
+    // module is reserved in node.js
     module = QUnit.module;
 
     //fake tests for mockups
@@ -24,7 +24,9 @@
         this.mockup.changeTexts();
         
         this.para.each(function(index, elem) {
-            equal(elem.innerHTML, "new paragraph " + (index + 1), "new text for paragraph " + (index + 1));
+            equal(elem.innerHTML, 
+                    "new paragraph " + (index + 1), 
+                    "new text for paragraph " + (index + 1));
         });
     });
 
