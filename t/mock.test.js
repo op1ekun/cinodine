@@ -19,7 +19,7 @@
     	ok(false, "this is not true!");
     });
     
-    test("soem DOM test", function() {
+    test("some DOM test", function() {
         expect(2);
         this.mockup.changeTexts();
         

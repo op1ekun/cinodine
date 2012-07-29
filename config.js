@@ -1,7 +1,8 @@
 exports.paths   = [
     {
         code    : "./mocks/mock.js",
-        tests   : "./t/mock.test.js"   
+        tests   : "./t/mock.test.js",
+        tmpl    : "./t/tmpl/mock.tmpl"
     },
     {
         code    : "../LocalCache/lib/Storage.js",
