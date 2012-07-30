@@ -1,6 +1,6 @@
 (function($) {
     // module is reserved in node.js
-    module = QUnit.module;
+    var module = QUnit.module;
 
     //fake tests for mockups
     module("mockup1", {
