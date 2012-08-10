@@ -4,6 +4,3 @@
 [submodule "deps/node-qunit-jsdom"]
 	path = deps/node-qunit-jsdom
 	url = git@github.com:op1ekun/node-qunit-jsdom.git
-[submodule "deps/node-localStorage"]
-	path = deps/node-localStorage
-	url = git://github.com/coolaj86/node-localStorage.git
