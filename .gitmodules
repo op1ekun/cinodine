@@ -1,6 +1,3 @@
-[submodule "deps/qunit"]
-	path = deps/qunit
-	url = https://github.com/jquery/qunit.git
 [submodule "deps/node-qunit-jsdom"]
 	path = deps/node-qunit-jsdom
 	url = git@github.com:op1ekun/node-qunit-jsdom.git
